@@ -1,1 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Wraithveil Neon Mouse Demo</title>
+  <style>
+    /* Basic page styling */
+    body {
+      margin: 0;
+      background: #111;
+      overflow: hidden;
+      color: #fff;
+      font-family: sans-serif;
+    }
+    #controls {
+      position: absolute;
+      top: 20px;
+      left: 20px;
+      z-index: 10000;
+    }
+    #controls button {
+      background: #222;
+      border: 1px solid #444;
+      color: #fff;
+      padding: 0.5em 1em;
+      margin-right: 0.5em;
+      cursor: pointer;
+      border-radius: 4px;
+      font-size: 1rem;
+    }
+    #controls button:hover {
+      background: #333;
+    }
+  </style>
+</head>
+<body>
+  <div id="controls">
+    <button id="startBtn">Start Neon Mouse</button>
+    <button id="stopBtn">Stop Neon Mouse</button>
+  </div>
 
+  <!-- Include the minified neon script -->
+  <script src="../dist/mouseNeon.min.js"></script>
+
+  <script>
+    const startBtn = document.getElementById("startBtn");
+    const stopBtn = document.getElementById("stopBtn");
+
+    startBtn.addEventListener("click", () => {
+      initNeonMouseEffect();
+    });
+
+    stopBtn.addEventListener("click", () => {
+      destroyNeonMouseEffect();
+    });
+  </script>
+</body>
+</html>
