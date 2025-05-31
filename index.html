@@ -4,6 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>WraithVeil Media & Development</title>
+  <link href="https://fonts.googleapis.com/css2?family=UnifrakturCook:wght@700&display=swap" rel="stylesheet">
   <style>
     body {
       margin: 0;
@@ -16,16 +17,39 @@
       justify-content: center;
       min-height: 100vh;
       text-align: center;
+      overflow: hidden;
     }
     h1 {
-      font-size: 3em;
+      font-family: 'UnifrakturCook', cursive;
+      font-size: 4em;
       margin-bottom: 0.25em;
+      color: #c0c0c0;
+      text-shadow: 0 0 3px #00ffea, 0 0 4px #9933ff, 0 0 5px #33ff99;
+      background: linear-gradient(135deg, #999, #ccc);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      position: relative;
+    }
+    h1::after {
+      content: '';
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      width: 30px;
+      height: 30px;
+      background: radial-gradient(circle, rgba(0,255,255,0.1) 0%, rgba(0,0,0,0) 80%);
+      border-radius: 50%;
+      animation: ghostTrail 5s ease-in-out infinite;
+      filter: blur(6px);
     }
     h2 {
       font-weight: 400;
       font-size: 1.2em;
       color: #ccc;
       margin-bottom: 2em;
+      background: linear-gradient(45deg, #00ffea, #9933ff, #33ff99);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
     }
     .tagline {
       font-style: italic;
@@ -75,16 +99,44 @@
     form button:hover {
       background-color: #3399cc;
     }
+    @keyframes ghostTrail {
+      0% {
+        transform: translate(-50%, -50%) scale(0.8);
+        opacity: 0.3;
+      }
+      50% {
+        transform: translate(-50%, -65%) scale(1.4);
+        opacity: 0.1;
+      }
+      100% {
+        transform: translate(-50%, -80%) scale(1);
+        opacity: 0;
+      }
+    }
+    @keyframes cursorTrail {
+      0% { transform: scale(1); opacity: 0.5; }
+      100% { transform: scale(2); opacity: 0; }
+    }
+    .cursor-trail {
+      position: absolute;
+      width: 12px;
+      height: 12px;
+      background: radial-gradient(circle, rgba(102,255,204,0.3), rgba(153,51,255,0.2), rgba(0,255,234,0.2));
+      border-radius: 50%;
+      pointer-events: none;
+      animation: cursorTrail 0.8s ease-out forwards;
+      mix-blend-mode: screen;
+      filter: blur(6px);
+    }
   </style>
 </head>
 <body>
   <h1>WraithVeil</h1>
-  <h2>Video — Music — Motion Graphics — Development</h2>
+  <h2>Video — Music — Motion Graphics — Custom Software Development</h2>
   <p class="tagline">Crafting immersive experiences at the intersection of code and creation.</p>
 
   <div class="about">
-    <p>WraithVeil Media & Development is a creative studio dedicated to building experiences that blur the line between art and technology. From surreal animations and cinematic music videos to dynamic software solutions and sonic landscapes, we weave emotion, logic, and imagination into every project.</p>
-    <p>Our mission is to help visionary creators and brands express their story through multimedia — forging visuals, sounds, and interactive elements into something greater than the sum of its parts. We offer custom animations and scripts for businesses or artistic ventures, professional video editing, original soundtracks for film, TV, or video, and the design and deployment of tailored software. WraithVeil conjures the tools of the modern craft. We also specialize in mixing and mastering audio for pristine sonic presentation, and deliver cinematic VFX to elevate your video content into unforgettable visual experiences.</p>
+    <p>WraithVeil Media & Development is a creative studio dedicated to building experiences that blur the line between art and technology...</p>
   </div>
 
   <div class="portfolio">
@@ -98,8 +150,7 @@
 
   <div class="blog">
     <h3>From the Veil</h3>
-    <p>Welcome to our weekly blog, where we share insights from the creative frontier — project spotlights, behind-the-scenes stories, production tips, experimental workflows, and dispatches from the world of media and technology. Posts here are designed to flow directly into our newsletter and inspire content across our social platforms. Each week, we’ll explore a topic in depth and break it into short-form nuggets that travel well.</p>
-    <p>Coming soon: Our first dispatch — "Conjuring Atmosphere: Sound Design for the Soul."</p>
+    <p>Welcome to our weekly blog, where we share insights from the creative frontier...</p>
   </div>
 
   <div class="contact">
@@ -128,8 +179,15 @@
         document.getElementById('formStatus').innerText = 'Something went wrong.';
       });
     });
+
+    document.addEventListener('mousemove', (e) => {
+      const trail = document.createElement('div');
+      trail.className = 'cursor-trail';
+      trail.style.left = e.clientX + 'px';
+      trail.style.top = e.clientY + 'px';
+      document.body.appendChild(trail);
+      setTimeout(() => trail.remove(), 1000);
+    });
   </script>
 </body>
 </html>
-
-
