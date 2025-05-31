@@ -2,95 +2,56 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>WraithVeil Media & Development</title>
   <style>
     body {
-      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-      background-color: #0a0a0a;
-      color: #f0f0f0;
-      text-align: center;
       margin: 0;
-      padding: 0 1rem;
-    }
-    header {
-      padding: 2rem 1rem 1rem;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background-color: #0c0c0c;
+      color: #f4f4f4;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      height: 100vh;
+      text-align: center;
     }
     h1 {
-      font-size: 3rem;
-      margin-bottom: 0.5rem;
+      font-size: 3em;
+      margin-bottom: 0.25em;
     }
-    p.lead {
-      font-size: 1.2rem;
-      color: #bbb;
+    h2 {
+      font-weight: 400;
+      font-size: 1.2em;
+      color: #ccc;
+      margin-bottom: 2em;
     }
-    section {
-      margin-top: 3rem;
+    .tagline {
+      font-style: italic;
+      color: #999;
     }
-    ul {
-      list-style: none;
-      padding: 0;
+    .contact {
+      margin-top: 2em;
+      font-size: 1em;
     }
-    li {
-      font-size: 1.2rem;
-      margin-bottom: 0.5rem;
-    }
-    a {
-      color: #66f;
+    .contact a {
+      color: #66ccff;
       text-decoration: none;
     }
-    .newsletter input[type="email"] {
-      padding: 0.5rem;
-      width: 300px;
-      max-width: 90%;
-      font-size: 1rem;
-      margin-right: 0.5rem;
-    }
-    .newsletter button {
-      padding: 0.5rem 1rem;
-      font-size: 1rem;
-      background: #333;
-      color: #fff;
-      border: none;
-      cursor: pointer;
-    }
-    footer {
-      margin-top: 4rem;
-      font-size: 0.9rem;
-      color: #888;
+    .contact a:hover {
+      text-decoration: underline;
     }
   </style>
 </head>
 <body>
-  <header>
-    <h1>WraithVeil Media & Development</h1>
-    <p class="lead">Video • Music • Animation • Software</p>
-    <p class="lead"><em>Forged in shadow, delivered in light.</em></p>
-  </header>
+  <h1>WraithVeil</h1>
+  <h2>Video — Music — Animation — Development</h2>
+  <p class="tagline">Crafting immersive experiences at the intersection of code and creation.</p>
 
-  <section class="newsletter">
-    <h2>Join the WraithList</h2>
-    <p>Subscribe for releases, insights, and special content.</p>
-    <!-- Replace the form action with your Mailchimp URL -->
-    <form action="https://YOUR_MAILCHIMP_URL" method="post" target="_blank">
-      <input type="email" name="EMAIL" placeholder="Your email address" required>
-      <button type="submit">Subscribe</button>
-    </form>
-  </section>
-
-  <section>
-    <h2>Coming Soon</h2>
-    <ul>
-      <li>🎬 Music & Video Gallery</li>
-      <li>🛍️ Merch powered by Gooten</li>
-      <li>🧠 Blog & Project Journal</li>
-    </ul>
-  </section>
-
-  <footer>
-    <p>Contact us: <a href="mailto:wraithveilmediaanddevelopment@gmail.com">wraithveilmediaanddevelopment@gmail.com</a></p>
-    <p>© 2025 WraithVeil Media & Development</p>
-  </footer>
+  <div class="contact">
+    <p>Business inquiries: <a href="mailto:wraithveilmd@gmail.com">wraithveilmd@gmail.com</a></p>
+  </div>
 </body>
 </html>
 
