@@ -31,7 +31,7 @@
       font-style: italic;
       color: #999;
     }
-    .contact {
+    .contact, .subscribe {
       margin-top: 2em;
       font-size: 1em;
     }
@@ -41,6 +41,25 @@
     }
     .contact a:hover {
       text-decoration: underline;
+    }
+    form input[type="email"] {
+      padding: 0.5em;
+      border: none;
+      border-radius: 4px;
+      margin-right: 0.5em;
+      font-size: 1em;
+    }
+    form button {
+      padding: 0.5em 1em;
+      background-color: #66ccff;
+      color: #0c0c0c;
+      border: none;
+      border-radius: 4px;
+      font-size: 1em;
+      cursor: pointer;
+    }
+    form button:hover {
+      background-color: #3399cc;
     }
   </style>
 </head>
@@ -52,6 +71,32 @@
   <div class="contact">
     <p>Contact us: <a href="mailto:wraithveilmd@gmail.com">wraithveilmd@gmail.com</a></p>
   </div>
+
+  <div class="subscribe">
+    <form id="emailForm" name="emailForm">
+      <input type="email" name="email" placeholder="Enter your email" required>
+      <button type="submit">Subscribe</button>
+    </form>
+    <p id="formStatus" style="margin-top: 1em; color: #66ccff;"></p>
+  </div>
+
+  <script>
+    const form = document.forms['emailForm'];
+    form.addEventListener('submit', e => {
+      e.preventDefault();
+      fetch('https://script.google.com/macros/s/AKfycbwq4ZLkBGWq0NTBql28GuJtmKlAmXp6tt9NBIsGX3hEgvGUlXW5PSSK9VPTCikhWo-bkA/exec', {
+        method: 'POST',
+        body: new FormData(form),
+      }).then(response => {
+        document.getElementById('formStatus').innerText = 'Thanks for subscribing!';
+        form.reset();
+      }).catch(error => {
+        document.getElementById('formStatus').innerText = 'Something went wrong.';
+      });
+    });
+  </script>
 </body>
 </html>
+
+
 
