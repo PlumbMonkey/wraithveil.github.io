@@ -14,7 +14,7 @@
       flex-direction: column;
       align-items: center;
       justify-content: center;
-      height: 100vh;
+      min-height: 100vh;
       text-align: center;
     }
     h1 {
@@ -30,6 +30,20 @@
     .tagline {
       font-style: italic;
       color: #999;
+    }
+    .about, .portfolio, .blog {
+      max-width: 800px;
+      margin: 2em auto;
+      font-size: 1em;
+      line-height: 1.6;
+      padding: 0 1em;
+      color: #ddd;
+    }
+    .portfolio iframe {
+      width: 100%;
+      height: 315px;
+      margin-bottom: 1.5em;
+      border: none;
     }
     .contact, .subscribe {
       margin-top: 2em;
@@ -65,8 +79,28 @@
 </head>
 <body>
   <h1>WraithVeil</h1>
-  <h2>Video — Music — Animation — Development</h2>
+  <h2>Video — Music — Motion Graphics — Development</h2>
   <p class="tagline">Crafting immersive experiences at the intersection of code and creation.</p>
+
+  <div class="about">
+    <p>WraithVeil Media & Development is a creative studio dedicated to building experiences that blur the line between art and technology. From surreal animations and cinematic music videos to dynamic software solutions and sonic landscapes, we weave emotion, logic, and imagination into every project.</p>
+    <p>Our mission is to help visionary creators and brands express their story through multimedia — forging visuals, sounds, and interactive elements into something greater than the sum of its parts. We offer custom animations and scripts for businesses or artistic ventures, professional video editing, original soundtracks for film, TV, or video, and the design and deployment of tailored software. WraithVeil conjures the tools of the modern craft. We also specialize in mixing and mastering audio for pristine sonic presentation, and deliver cinematic VFX to elevate your video content into unforgettable visual experiences.</p>
+  </div>
+
+  <div class="portfolio">
+    <h3>Featured Work</h3>
+    <iframe src="https://www.youtube.com/embed/qwvi9Dtw8sg" allowfullscreen></iframe>
+    <iframe src="https://www.youtube.com/embed/LSKT6ZNlsc0" allowfullscreen></iframe>
+    <iframe src="https://www.youtube.com/embed/MvokFuddkr0" allowfullscreen></iframe>
+    <iframe src="https://www.youtube.com/embed/9qKR6wpHsEc" allowfullscreen></iframe>
+    <iframe src="https://www.youtube.com/embed/Nv7clLmkKfo" allowfullscreen></iframe>
+  </div>
+
+  <div class="blog">
+    <h3>From the Veil</h3>
+    <p>Welcome to our weekly blog, where we share insights from the creative frontier — project spotlights, behind-the-scenes stories, production tips, experimental workflows, and dispatches from the world of media and technology. Posts here are designed to flow directly into our newsletter and inspire content across our social platforms. Each week, we’ll explore a topic in depth and break it into short-form nuggets that travel well.</p>
+    <p>Coming soon: Our first dispatch — "Conjuring Atmosphere: Sound Design for the Soul."</p>
+  </div>
 
   <div class="contact">
     <p>Contact us: <a href="mailto:wraithveilmd@gmail.com">wraithveilmd@gmail.com</a></p>
@@ -97,6 +131,5 @@
   </script>
 </body>
 </html>
-
 
 
