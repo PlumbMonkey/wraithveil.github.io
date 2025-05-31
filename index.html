@@ -84,7 +84,7 @@
     const form = document.forms['emailForm'];
     form.addEventListener('submit', e => {
       e.preventDefault();
-      fetch('https://script.google.com/macros/s/AKfycbx6SjOPLjdfkKpoOY-Les6WmfIfHt88cidxXHIDpCoE7S-R8Zfuz-Nl8djpDz9zsmkrmQ/exec', {
+      fetch('https://script.google.com/macros/s/AKfycbxDSikp1o-Aav67TTcnVdZ-55ef-55peud9aCLc65hq029Eb0L_yVIQWna6IZjpvoXI/exec', {
         method: 'POST',
         body: new FormData(form),
       }).then(response => {
