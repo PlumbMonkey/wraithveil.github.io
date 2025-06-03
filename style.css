@@ -1,0 +1,273 @@
+/* ========== GLOBAL ========== */
+html, body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  min-height: 100vh;
+  background: #111 url('images/background-mansion-labyrinth.png') no-repeat center center fixed;
+  background-size: cover;
+  color: #fafaff;
+  font-family: 'Inter', Arial, sans-serif;
+  overflow-x: hidden;
+}
+
+/* ========== OVERLAY ========== */
+.overlay {
+  position: fixed;
+  top: 0; left: 0; right: 0; bottom: 0;
+  background: linear-gradient(180deg,rgba(10,10,32,0.67) 60%,rgba(10,10,16,0.95) 100%);
+  pointer-events: none;
+  z-index: 1;
+}
+
+/* ========== LAYOUT CONTAINER ========== */
+.container {
+  position: relative;
+  z-index: 2;
+  max-width: 720px;
+  margin: 0 auto;
+  padding: 3.2rem 1.3rem 1.5rem 1.3rem;
+  text-align: center;
+}
+
+/* ========== LOGO ========== */
+.logo {
+  font-family: 'UnifrakturCook', cursive;
+  font-size: 3.5rem;
+  font-weight: 700;
+  letter-spacing: 0.07em;
+  color: #fafaff;
+  -webkit-text-stroke: 2px #300c55;
+  text-shadow:
+    0 0 6px #fff1,
+    0 0 24px #933fff,
+    0 0 44px #00f7ff,
+    0 0 72px #410940,
+    0 2px 32px #0009;
+  margin-bottom: 0.1em;
+}
+
+/* ========== HEADLINE ========== */
+.headline {
+  font-size: 2.2rem;
+  font-weight: 800;
+  margin-bottom: 0.5em;
+  color: #fafaff;
+  text-shadow: 0 2px 24px #211244, 0 1px 8px #1e184a;
+  letter-spacing: -1px;
+}
+
+/* ========== TAGLINE ========== */
+.tagline {
+  font-size: 1.23rem;
+  font-weight: 400;
+  color: #e7e0fa;
+  margin-bottom: 1.9em;
+  text-shadow: 0 1px 7px #12111a;
+  font-style: italic;
+}
+
+.tagline-sub {
+  display: block;
+  margin-top: 0.8em;
+  font-size: 1.05em;
+  opacity: 0.84;
+}
+
+/* ========== SERVICES ========== */
+.services {
+  margin: 2.2rem auto 1.4rem auto;
+  background: #191929e7;
+  border-radius: 2rem;
+  padding: 2rem 1.2rem 1.2rem 1.2rem;
+  box-shadow: 0 0 16px #0009;
+  max-width: 580px;
+  text-align: center;
+}
+
+.services h2 {
+  font-size: 1.45rem;
+  font-weight: 700;
+  margin-bottom: 1.1em;
+  color: #e7e0fa;
+  text-shadow: 0 1px 8px #212049;
+}
+
+.services ul {
+  display: inline-block;
+  text-align: left;
+  margin: 0 auto 1.5em auto;
+  padding: 0;
+}
+
+.services li {
+  text-align: left;
+  margin: 0.55em 0;
+  line-height: 1.6;
+  font-size: 1.1rem;
+}
+
+/* ========== REEL ========== */
+.reel {
+  margin: 2.5rem auto 1.2rem auto;
+  text-align: center;
+}
+
+.reel h2 {
+  font-size: 1.3rem;
+  font-weight: 700;
+  color: #e7e0fa;
+  text-shadow: 0 1px 7px #232245;
+}
+
+.reel-note {
+  font-size: 1.01rem;
+  opacity: 0.8;
+}
+
+/* ========== MUSIC VIDEOS ========== */
+.music-videos {
+  margin: 2.5rem auto 2rem auto;
+  padding: 1.1rem 0 0.8rem 0;
+  max-width: 1020px;
+  text-align: center;
+}
+
+.music-videos h2 {
+  font-size: 1.6rem;
+  font-weight: 700;
+  margin-bottom: 1.2rem;
+  color: #e7e0fa;
+  text-shadow: 0 1px 8px #232245;
+}
+
+.music-video-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2rem 1rem;
+  justify-content: center;
+}
+
+.music-video {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.music-caption {
+  margin-top: 0.7rem;
+  font-size: 1.09rem;
+  color: #fafaff;
+  text-shadow: 0 1px 3px #0008;
+}
+
+/* Responsive for music videos */
+@media (max-width: 1050px) {
+  .music-video-list {
+    flex-direction: column;
+    gap: 1.5rem 0;
+    align-items: center;
+  }
+}
+
+/* ========== DEMO CANVAS ========== */
+.demo {
+  margin: 1.6rem 0 1.6rem 0;
+  border-radius: 1.2rem;
+  overflow: hidden;
+  box-shadow: 0 0 24px #000a, 0 2px 48px #26263370;
+  position: relative;
+}
+
+/* ========== AFFILIATES BOX ========== */
+.affiliates {
+  margin: 2.6rem auto 1.5rem auto;
+  padding: 1.4rem 1.2rem 1rem 1.2rem;
+  background: #191929ed;
+  color: #ded9ef;
+  border-radius: 1rem;
+  font-size: 1.03rem;
+  box-shadow: 0 0 10px #0004;
+  max-width: 420px;
+  text-align: center;
+}
+
+.affiliates h2 {
+  margin-bottom: 1em;
+  font-size: 1.22rem;
+  color: #fff;
+  text-shadow: 0 1px 7px #212049;
+}
+
+.affiliates ul {
+  display: inline-block;
+  text-align: left;
+  margin: 0 auto;
+  padding-left: 1.2em;
+}
+.affiliates li {
+  margin-bottom: 0.5em;
+}
+.affiliates a {
+  color: #1ae0f8;
+}
+
+/* ========== CALL TO ACTION ========== */
+.cta {
+  font-size: 1.16rem;
+  margin: 2.4rem 0 1.2rem 0;
+  font-weight: 600;
+  letter-spacing: 1px;
+  text-shadow: 0 1px 8px #1e184a;
+}
+
+.cta-btn {
+  display: inline-block;
+  background: linear-gradient(90deg,#933fff 20%,#00f7ff 100%);
+  color: #fff;
+  border: none;
+  padding: 0.86em 2.2em;
+  font-size: 1.14rem;
+  border-radius: 2em;
+  font-weight: 700;
+  margin-bottom: 0.7em;
+  margin-top: 0.5em;
+  cursor: pointer;
+  box-shadow: 0 2px 20px #300c5572;
+  transition: background 0.2s, box-shadow 0.2s, color 0.2s;
+  text-decoration: none;
+  outline: none;
+}
+.cta-btn:hover {
+  background: linear-gradient(90deg,#00f7ff 0%,#933fff 80%);
+  color: #fffbe9;
+  box-shadow: 0 4px 32px #00f7ffa7;
+}
+
+/* ========== LINKS ========== */
+a {
+  color: #12d1ff;
+  text-decoration: none;
+}
+a:hover {
+  text-decoration: underline;
+}
+
+/* ========== TEXT SHADOWS FOR READABILITY ========== */
+.headline, .features, .cta, .install, .affiliates {
+  text-shadow: 0 1px 6px #000c, 0 0px 2px #1118;
+}
+
+/* ========== RESPONSIVE DESIGN ========== */
+@media (max-width: 800px) {
+  .container { max-width: 99vw; padding: 2rem 0.3rem; }
+  .features, .affiliates, .install, .services { padding: 1.2rem 0.5rem; }
+  .logo { font-size: 2.1rem; }
+  .headline { font-size: 1.3rem; }
+}
+
+@media (max-width: 500px) {
+  .music-video iframe { width: 98vw; height: 52vw; }
+}

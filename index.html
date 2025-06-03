@@ -1,158 +1,93 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>WraithVeil Media & Development</title>
-  <link href="https://fonts.googleapis.com/css2?family=UnifrakturCook:wght@700&display=swap" rel="stylesheet">
-  <style>
-    body {
-      margin: 0;
-      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-      background-color: #0c0c0c;
-      color: #f4f4f4;
-      text-align: center;
-      overflow-x: hidden;
-    }
-    h1 {
-      font-family: 'UnifrakturCook', cursive;
-      font-size: 4em;
-      margin-top: 0.5em;
-      color: #c0c0c0;
-      text-shadow: 0 0 5px #00ffea, 0 0 7px #9933ff, 0 0 9px #33ff99;
-      background: linear-gradient(135deg, #bbb, #eee);
-      -webkit-background-clip: text;
-      -webkit-text-fill-color: transparent;
-      position: relative;
-    }
-    h2 {
-      font-weight: 400;
-      font-size: 1.2em;
-      color: #ccc;
-      margin-bottom: 2em;
-      background: linear-gradient(45deg, #00ffea, #9933ff, #33ff99);
-      -webkit-background-clip: text;
-      -webkit-text-fill-color: transparent;
-    }
-    .tagline {
-      font-style: italic;
-      color: #999;
-    }
-    .about, .portfolio, .blog {
-      max-width: 800px;
-      margin: 2em auto;
-      font-size: 1em;
-      line-height: 1.6;
-      padding: 0 1em;
-      color: #ddd;
-    }
-    .portfolio iframe {
-      width: 100%;
-      height: 315px;
-      margin-bottom: 1.5em;
-      border: none;
-    }
-    .contact, .subscribe {
-      margin-top: 2em;
-      font-size: 1em;
-    }
-    .contact a {
-      color: #66ccff;
-      text-decoration: none;
-    }
-    .contact a:hover {
-      text-decoration: underline;
-    }
-    .trail {
-      position: fixed;
-      top: 0;
-      left: 0;
-      width: 100vw;
-      height: 100vh;
-      pointer-events: none;
-      overflow: hidden;
-      z-index: 999;
-    }
-    .particle {
-      position: absolute;
-      width: 16px;
-      height: 16px;
-      background: radial-gradient(circle, rgba(102,204,255,0.2), rgba(0,0,0,0));
-      border-radius: 50%;
-      filter: blur(2px);
-      animation: fadeOutTrail 1.2s ease-out forwards;
-    }
-    .sparkle {
-      position: absolute;
-      width: 6px;
-      height: 6px;
-      background: radial-gradient(circle, #fff, rgba(255,255,255,0));
-      border-radius: 50%;
-      pointer-events: none;
-      animation: sparkleExplode 2s ease-out forwards;
-    }
-    @keyframes fadeOutTrail {
-      0% { opacity: 1; transform: scale(0.5); }
-      100% { opacity: 0; transform: scale(1.5); }
-    }
-    @keyframes sparkleExplode {
-      0% { opacity: 1; transform: scale(1); }
-      100% { opacity: 0; transform: translate(var(--x), var(--y)) scale(0.5); }
-    }
-  </style>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>WraithVeil Media and Development</title>
+  <link rel="stylesheet" href="style.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700;800&family=UnifrakturCook:wght@700&display=swap" rel="stylesheet">
 </head>
 <body>
-  <h1>WraithVeil</h1>
-  <h2 class="tagline">Media & Development for the Otherworldly</h2>
+  <div class="overlay"></div>
+  <div class="container">
+    <div class="logo">WraithVeil</div>
+    <div class="headline">Media and Development</div>
+    <div class="tagline">
+      Haunted trails. Neon spirits. Bring your UI to life.
+      <span class="tagline-sub">Specializing in video editing, animation, sound design, and custom software development.</span>
+    </div>
 
-  <div class="trail" id="trail"></div>
+    <div class="services">
+      <h2>Services</h2>
+      <ul>
+        <li><strong>Video Editing:</strong> Professional editing for music videos, commercials, and more.</li>
+        <li><strong>2D/3D Animation:</strong> Utilizing Blender and Moho for captivating animations.</li>
+        <li><strong>Sound Design:</strong> Custom sound effects, audio editing, mixing, and mastering.</li>
+        <li><strong>Software Development:</strong> Custom UI/UX solutions and interactive experiences.</li>
+      </ul>
+    </div>
 
-  <div class="about">
-    <h3>About</h3>
-    <p>WraithVeil Media & Development brings together creative technology, video, sound, and software into a powerful force for storytelling and innovation. From eerie atmospheres to bold visions, we craft custom experiences for media projects, independent creators, and businesses alike.</p>
+    <div class="reel">
+      <h2>Featured Music Videos</h2>
+      <div class="music-video-list">
+        <div class="music-video">
+          <iframe width="320" height="180" src="https://www.youtube.com/embed/qwvi9Dtw8sg" frameborder="0" allowfullscreen></iframe>
+          <div class="music-caption">Flight of the Lost Soul Music Video</div>
+        </div>
+        <div class="music-video">
+          <iframe width="320" height="180" src="https://www.youtube.com/embed/LSKT6ZNlsc0" frameborder="0" allowfullscreen></iframe>
+          <div class="music-caption">Dream Tunnel Music Video</div>
+        </div>
+        <div class="music-video">
+          <iframe width="320" height="180" src="https://www.youtube.com/embed/9qKR6wpHsEc" frameborder="0" allowfullscreen></iframe>
+          <div class="music-caption">Reformation Music Video</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="demo">
+      <canvas id="neonCanvas" width="600" height="340" style="width:100%;height:auto;display:block;background:transparent;"></canvas>
+    </div>
+
+    <div class="install">
+      <span class="badge"><img src="https://img.shields.io/npm/v/wraithveil-neon-mouse?color=1ae0f8" alt="npm"></span>
+      <span class="badge"><img src="https://img.shields.io/github/license/PlumbMonkey/wraithveil-neon-mouse?color=yellow" alt="MIT"></span><br>
+      <strong>Install via npm:</strong> <br>
+      <code>npm install wraithveil-neon-mouse</code><br>
+      <b>or</b> <br>
+      <b><a href="https://github.com/PlumbMonkey/wraithveil-neon-mouse" target="_blank">View on GitHub</a></b>
+    </div>
+
+    <div class="affiliates">
+      <h2>Tools & Resources</h2>
+      <ul>
+        <li><a href="https://go.fiverr.com/visit/?bta=1126363&brand=fiverrmarketplace" target="_blank">Fiverr: Hire a JS/Canvas artist</a></li>
+        <li><a href="https://www.visme.co/?ref=william59" target="_blank">Visme: Create demo videos & docs</a></li>
+        <li><a href="https://www.beatport.com/?a_aid=68365ad7b3509&a_bid=5f449604" target="_blank">Beatport: Explore electronic music</a></li>
+      </ul>
+    </div>
+
+    <div class="cta">
+      <p>Star it. Share it. Fork it. Build something haunted.</p>
+      <a class="cta-btn" href="mailto:wraithveilmd@gmail.com">Contact Me</a>
+    </div>
   </div>
 
-  <div class="portfolio">
-    <h3>Portfolio</h3>
-    <iframe src="https://www.youtube.com/embed/qwvi9Dtw8sg" allowfullscreen></iframe>
-    <iframe src="https://www.youtube.com/embed/LSKT6ZNlsc0" allowfullscreen></iframe>
-    <iframe src="https://www.youtube.com/embed/MvokFuddkr0" allowfullscreen></iframe>
-    <iframe src="https://www.youtube.com/embed/9qKR6wpHsEc" allowfullscreen></iframe>
-    <iframe src="https://www.youtube.com/embed/Nv7clLmkKfo" allowfullscreen></iframe>
-  </div>
+  <script src="mouseNeon.js"></script>
+<script>
+  // Make sure the script runs after the DOM is loaded
+  document.addEventListener("DOMContentLoaded", function() {
+    const neonCanvas = document.getElementById('neonCanvas');
+    if (typeof window.initNeonMouseEffect === 'function') {
+      window.initNeonMouseEffect({ canvas: neonCanvas });
+    } else {
+      if (neonCanvas) neonCanvas.style.display = "none";
+      console.warn('Neon Mouse effect not loaded or API changed.');
+    }
+  });
+</script>
 
-  <div class="contact">
-    <p>Contact us: <a href="mailto:wraithveilmd@gmail.com">wraithveilmd@gmail.com</a></p>
-  </div>
-
-  <script>
-    const trail = document.getElementById('trail');
-
-    window.addEventListener('mousemove', e => {
-      const particle = document.createElement('div');
-      particle.className = 'particle';
-      particle.style.left = `${e.pageX}px`;
-      particle.style.top = `${e.pageY}px`;
-      trail.appendChild(particle);
-      setTimeout(() => particle.remove(), 1200);
-    });
-
-    window.addEventListener('click', e => {
-      for (let i = 0; i < 25; i++) {
-        const sparkle = document.createElement('div');
-        sparkle.className = 'sparkle';
-        const angle = Math.random() * 2 * Math.PI;
-        const distance = 40 + Math.random() * 30;
-        const offsetX = Math.cos(angle) * distance;
-        const offsetY = Math.sin(angle) * distance;
-        sparkle.style.left = `${e.pageX}px`;
-        sparkle.style.top = `${e.pageY}px`;
-        sparkle.style.setProperty('--x', `${offsetX}px`);
-        sparkle.style.setProperty('--y', `${offsetY}px`);
-        trail.appendChild(sparkle);
-        setTimeout(() => sparkle.remove(), 2000);
-      }
-    });
-  </script>
 </body>
 </html>
+
+
